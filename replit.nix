@@ -1,6 +1,7 @@
 { pkgs }: {
 	deps = [
-		pkgs.vimHugeX
+		pkgs.netcat-gnu
+  pkgs.vimHugeX
   pkgs.nano
   pkgs.nodejs-16_x
         pkgs.nodePackages.typescript-language-server

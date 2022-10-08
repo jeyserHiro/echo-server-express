@@ -2,6 +2,21 @@ const express = require('express');
 
 const app = express();
 
+const morgan = require('morgan')
+
+morgan.token('id', (req) => {
+  req?.id?.split('-')[0]
+})
+
+app.use(
+  morgan(
+    "[:date[iso] #:id] Started :method :url for :remote-addr",
+    {
+      immediate: true
+    }
+  )
+)
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
