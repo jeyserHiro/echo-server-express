@@ -20,9 +20,11 @@ PORT=3000 yarn start
 ## Methods
 
 The server will expose the following HTTP methods:  
-GET, POST, PUT, PATH, DELETE, COPY, HEAD, OPTIONS, PURGE, LOCK, UNLOCK, PROPFIND.
+GET, POST, PUT, PATH, DELETE, COPY, HEAD, OPTIONS, PURGE, LOCK, UNLOCK,
+PROPFIND.
 
-The server will log to the console each incoming request in a pretty and readable manner.
+The server will log to the console each incoming request in a pretty and
+readable manner.
 
 ## Example
 
