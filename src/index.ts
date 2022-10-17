@@ -25,3 +25,4 @@ app.listen(PORT, () =>
     (entry) => `\n 🔥 ${routeToMethod(entry.route)}: ${entry.route.path}`,
   )}`),
 )
+
