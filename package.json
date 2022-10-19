@@ -6,7 +6,8 @@
   "scripts": {
     "prestart": "prettier --write .",
     "poststart": "npm run watch",
-    "start": "nodemon src/index.ts",
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon src/index.ts",
     "concurrent": "concurrently npm:watch:*",
     "watch": "tsc -w",
     "build": "tsc --build",

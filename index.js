@@ -20,9 +20,11 @@ const startProcess = (proc) => {
 
 const npmConcurrent = () => spawn('npm', ['run', 'concurrent'])
 const npmStart = () => spawn('npm', ['start'])
+const npmDev = () => spawn('npm', ['run', 'dev'])
 
 function main() {
   // npmConcurrent()
+  // npmDev()
   let start = npmStart()
   startProcess(start)
 }
