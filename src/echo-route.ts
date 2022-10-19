@@ -23,39 +23,39 @@ const logRequest = (req: Request) => {
 `)
 }
 
-  ;[
-    'get',
-    'post',
-    'put',
-    'patch',
-    'delete',
-    'copy',
-    'head',
-    'options',
-    'purge',
-    'lock',
-    'unlock',
-    'propfind',
-  ].forEach((method) => {
-    router[method]('/*', (req: Request, res: Response) => {
-      logRequest(req)
-      let payload = {
-        request: {
-          headers: req.headers,
-          protocol: req.protocol,
-          body: req.body,
-          params: req.params, //no chance
-          query: req.query,
-          host: req.hostname,
-          path: req.path,
-          originalUrl: req.originalUrl,
-          subdomains: req.subdomains,
-        },
-        success: true,
-      }
+;[
+  'get',
+  'post',
+  'put',
+  'patch',
+  'delete',
+  'copy',
+  'head',
+  'options',
+  'purge',
+  'lock',
+  'unlock',
+  'propfind',
+].forEach((method) => {
+  router[method]('/*', (req: Request, res: Response) => {
+    logRequest(req)
+    let payload = {
+      request: {
+        headers: req.headers,
+        protocol: req.protocol,
+        body: req.body,
+        params: req.params, //no chance
+        query: req.query,
+        host: req.hostname,
+        path: req.path,
+        originalUrl: req.originalUrl,
+        subdomains: req.subdomains,
+      },
+      success: true,
+    }
 
-      res.status(200).json(payload)
-    })
+    res.status(200).json(payload)
   })
+})
 
 export default router

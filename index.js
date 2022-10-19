@@ -25,7 +25,8 @@ const npmDev = () => spawn('npm', ['run', 'dev'])
 function main() {
   // npmConcurrent()
   // npmDev()
-  let start = npmStart()
-  startProcess(start)
+  let proc = npmStart()
+  proc = npmConcurrent()
+  startProcess(proc)
 }
 main()
